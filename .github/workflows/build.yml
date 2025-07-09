@@ -13,10 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: test rename
-      run: ren "external\MiloEditor" "ME"
-    - name: test rename 2
-      run: ren "external\ME\MiloLib" "ML"
+      with:
+        submodules: 'true'
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
