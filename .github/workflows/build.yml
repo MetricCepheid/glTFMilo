@@ -12,11 +12,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - uses: actions/checkout@v4
     - name: test rename
       run: ren "external\MiloEditor" "ME"
     - name: test rename 2
       run: ren "external\ME\MiloLib" "ML"
-    - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
